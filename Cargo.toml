@@ -3,5 +3,24 @@ name = "nautilus-download"
 version = "0.1.0"
 authors = ["Yukio Usuzumi <anohigisavay@gmail.com>"]
 
+[lib]
+name = "nautilus_download"
+crate-type = ["rlib", "dylib"]
+
 [dependencies]
 hyper = "0.10"
+gdk = "0.5.2"
+glib = "0.1.2"
+glib-sys = "0.3.3"
+gobject-sys = "0.3.3"
+# gtk = { git = "https://github.com/gtk-rs/gtk.git" }
+libc = "0.2"
+nautilus-extension = "0.2.1"
+
+[dependencies.gtk]
+version = "0.1.2"
+features = ["v3_16"]
+
+[dependencies.gtk-sys]
+version = "0.3.3"
+features = ["v3_16"]

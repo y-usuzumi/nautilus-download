@@ -12,13 +12,13 @@ pub enum DownloadError {
 }
 
 impl From<HyperError> for DownloadError {
-    fn from(err: HyperError) -> DownloadError {
+    fn from(_: HyperError) -> DownloadError {
         DownloadError::RequestError
     }
 }
 
 impl From<IOError> for DownloadError {
-    fn from(err: IOError) -> DownloadError {
+    fn from(_: IOError) -> DownloadError {
         DownloadError::FileError
     }
 }
